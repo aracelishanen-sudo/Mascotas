@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | NEXORA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Signika:wght@400;600&display=swap"
+        rel="stylesheet">    
+    <link rel="stylesheet" href="registro.css">
+    <style>
+        .resultado-tarjeta {
+            border-top: 5px solid #000046;
+        }
+    </style>
+
+</head>
+<body>
+    <header class="menu">
+        <a href="index.html" class="marca">
+            <img src="img/logo.png" alt="Logo">
+
+            <div class="titulo">
+                <p class="tit">NEXORA</p>
+                <p class="subtitulo">Instituto superior</p>
+            </div>
+        </a>
+        <nav class="navegacion">
+            <a href="index.html">Volver</a>
+        </nav>
+    </header>
+
+    <!-- REGISTRO -->
+    <main class="principal">
+        
+        <!-- IMAGEN AL COSTADO -->
+        <section class="imagen-lateral">
+            <img src="img/registrate.jpeg" alt="Estudiantes">
+
+            <div class="texto-imagen">
+                <h2>El futuro que sueñas te espera</h2>
+                <p>
+                    Prepárate para alcanzar tus metas profesionales
+                    y construir nuevas oportunidades.
+                </p>
+            </div>
+        </section>
+
+        <section class="formulario">
+            <h1>Regístrate en NEXORA</h1>
+            <p class="descripcion">
+                Déjanos tus datos y recibe información sobre
+                nuestras carreras y modalidades de estudio.
+            </p>
+
+            <form id="formularioRegistro" action="resultado.html" method="get">
+                <div class="grupo">
+                    <label for="nombre">Nombres</label>
+                    <input 
+                    type="text" 
+                    id="nombre" 
+                    name="nombre"
+                    placeholder="Ingresa tus nombres" 
+                    required>
+                </div>
+
+                <div class="grupo">
+                    <label for="apellido">Apellidos</label>
+                    <input 
+                    type="text" 
+                    id="apellido" 
+                    name="apellido"
+                    placeholder="Ingresa tus apellidos" 
+                    required>
+                </div>
+
+                <div class="grupo">
+                    <label for="dni">DNI</label>
+                    <input 
+                    type="text" 
+                    id="dni" 
+                    name="dni"
+                    placeholder="Ingresa tu DNI"
+                    maxlength="8" pattern="[0-9]{8}"
+                    inputmode="numeric" 
+                    required>
+                </div>
+
+                <div class="grupo">
+                    <label for="celular">Celular</label>
+                    <input 
+                    type="tel" 
+                    id="celular" 
+                    name="celular"
+                    placeholder="Ingrese su número"
+                    maxlength="9" pattern="9[0-9]{8}"
+                    inputmode="numeric" 
+                    required>
+                </div>
+
+                <div class="grupo completo">
+                    <label for="correo">Correo electrónico</label>
+                    <input 
+                    type="email" 
+                    id="correo" 
+                    name="correo"
+                    placeholder="Ingrese su correo" 
+                    required>
+                </div>
+
+                <div class="grupo completo">
+                    <label for="modalidad">Modalidad de estudio</label>
+                    <select id="modalidad" name="modalidad" required>
+                        <option value="">Selecciona una modalidad</option>
+                        <option value="presencial">Presencial</option>
+                        <option value="virtual">Virtual</option>
+                        <option value="semipresencial">Semipresencial</option>
+                    </select>
+                </div>
+
+                <div class="terminos">
+                    <input 
+                    type="checkbox" 
+                    id="aceptar"
+                    name="aceptar" 
+                    required>
+
+                    <label for="aceptar">
+                        Acepto los términos y condiciones y la
+                        política de privacidad.
+                    </label>
+                </div>
+
+                <p id="mensajeRegistro" aria-live="polite"></p>
+                <button type="submit">Enviar mis datos</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2026 NEXORA - Instituto Superior. Todos los derechos reservados.</p>
+    </footer>
+    <script src="registro.js"></script>
+</body>
+</html>

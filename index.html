@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXORA</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="inicio">
+        <nav aria-label="Enlaces adicionales">
+            <div class="desplegable">
+                <a href="#" class="enlace">Blog</a>
+                <div class="opciones">
+                    <a href="#">Explorar</a>
+                    <a href="#">Destacados</a>
+                </div>
+            </div>
+            <div class="desplegable">
+                <a href="#" class="enlace">Más</a>
+                <div class="opciones">
+                    <a href="#">Estudiantes</a>
+                    <a href="#">Postulantes</a>
+                    <a href="#">Docentes</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="menu">
+        <a href="#" class="marca">
+            <img src="img/logo.png" alt="Logo de NEXORA">
+
+            <div class="titulo">
+                <p class="tit">NEXORA</p>
+                <p class="subtitulo">Instituto superior</p>
+            </div>
+        </a>
+        <nav class="navegacion" aria-label="Menú principal">
+            <a href="#nosotros">Nosotros</a>
+            <a href="#facultades">Facultades</a>
+            <a href="#campus">Campus</a>
+        </nav>
+        <a href="registro.html" class="btn-registro">Regístrate</a>
+    </div>
+</header>
+
+<main>
+
+    <!-- CARRUSEL -->
+    <section class="carrusel" aria-label="Presentación de NEXORA">
+        <div id="carouselStacked"
+             class="carousel slide"
+             data-bs-ride="carousel"
+             data-bs-interval="5000">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/inicio.png"
+                         class="d-block w-100"
+                         alt="Presentación del Instituto NEXORA">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/segundo.png"
+                         class="d-block w-100"
+                         alt="Instalaciones del instituto">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/blog.png"
+                         class="d-block w-100"
+                         alt="Actividades de NEXORA">
+                </div>
+            </div>
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselStacked"
+                    data-bs-slide="prev"
+                    aria-label="Imagen anterior">
+                <span class="carousel-control-prev-icon"
+                      aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselStacked"
+                    data-bs-slide="next"
+                    aria-label="Imagen siguiente">
+                <span class="carousel-control-next-icon"
+                      aria-hidden="true"></span>
+            </button>
+        </div>
+    </section>
+
+    <section class="principal" id="nosotros">
+        <h1>NOSOTROS</h1>
+        <div class="contenido">
+            <p>
+                Somos el Instituto Nexora, institución educativa con sede
+                en Ayacucho, comprometida con la formación de profesionales
+                competentes, éticos y preparados para el mundo laboral.
+                Desde 2016, brindamos educación práctica, actualizada y
+                cercana, con docentes experimentados, infraestructura
+                adecuada y vínculos con empresas que abren puertas a
+                nuestros estudiantes.
+                <br><br>
+                Nuestra misión es formar talento que transforme; nuestra
+                visión, ser un referente de calidad en la región.
+                Trabajamos con excelencia, integridad e inclusión para
+                que cada persona logre sus metas.
+            </p>
+            <img src="img/nosotros.jpeg"
+                 alt="Instalaciones del Instituto NEXORA">
+        </div>
+    </section>
+
+    <!-- FACULTADES -->
+    <section class="facultad" id="facultades">
+        <h1>FACULTADES</h1>
+        <div class="contenedor">
+            <article class="card facultad-card">
+                <img src="img/inge.jpeg"
+                     class="card-img-top"
+                     alt="Facultad de Ingeniería">
+                <div class="card-body">
+                    <h2 class="card-title">Facultad de Ingeniería</h2>
+                    <p class="card-text">
+                        Conoce nuestras carreras profesionales de ingeniería.
+                    </p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </article>
+
+            <article class="card facultad-card">
+                <img src="img/admin.jpeg"
+                     class="card-img-top"
+                     alt="Facultad de Ciencias de la Empresa">
+                <div class="card-body">
+                    <h2 class="card-title">
+                        Facultad de Ciencias de la Empresa
+                    </h2>
+                    <p class="card-text">
+                        Descubre nuestras carreras de gestión empresarial
+                        y administración.
+                    </p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </article>
+
+            <article class="card facultad-card">
+                <img src="img/salud.jpeg"
+                     class="card-img-top"
+                     alt="Facultad de Salud">
+                <div class="card-body">
+                    <h2 class="card-title">Facultad de Salud</h2>
+                    <p class="card-text">
+                        Explora nuestras opciones de formación en el área
+                        de la salud.
+                    </p>
+                    <a href="salud.html" class="btn btn-primary">Ver más</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="campus-seccion" id="campus">
+        <h1>CAMPUS</h1>
+        <div class="campus">
+
+            <!-- AREQUIPA -->
+            <article class="campus-card">
+                <div class="campus-imagen arequipa">
+                    <div class="campus-titulo">
+                        <h2>AREQUIPA</h2>
+                    </div>
+                </div>
+                <div class="campus-contenido">
+                    <h3>Campus Arequipa</h3>
+                    <p>
+                        Un campus moderno en el sur del país, con espacios
+                        diseñados para impulsar tu desarrollo académico
+                        y profesional.
+                    </p>
+                    <a href="#">Ver campus</a>
+                </div>
+            </article>
+            
+            <!-- AYACUCHO -->            
+             <article class="campus-card">
+                <div class="campus-imagen ayacucho">
+                    <div class="campus-titulo">
+                        <h2>AYACUCHO</h2>
+                    </div>
+                </div>
+                <div class="campus-contenido">
+                    <h3>Campus Ayacucho</h3>
+                    <p>
+                        Formación de calidad en un entorno que integra
+                        tradición, cultura y oportunidades de crecimiento.
+                    </p>
+                    <a href="ayacucho.html">Ver campus</a>
+                </div>
+            </article>
+
+            <!-- CUSCO -->            
+             <article class="campus-card">
+                <div class="campus-imagen cusco">
+                    <div class="campus-titulo">
+                        <h2>CUSCO</h2>
+                    </div>
+                </div>
+                <div class="campus-contenido">
+                    <h3>Campus Cusco</h3>
+                    <p>
+                        Estudia en una ciudad histórica mientras desarrollas
+                        tu talento en un campus equipado para tu futuro.
+                    </p>
+                    <a href="#">Ver campus</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="registro" id="registro">
+        <h1>¿QUIERES FORMAR PARTE DE NEXORA?</h1>
+        <p>Prepárate para construir tu futuro profesional.</p>
+        <a href="mailto:informes@nexora.edu.pe" class="btn-registro">
+            Solicitar información
+        </a>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2026 NEXORA - Instituto Superior. Todos los derechos reservados.</p>
+</footer>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>

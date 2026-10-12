@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    color: #333;
+}
+
+/* CABECERA */
+.menu {
+    background-color: #000046;
+    min-height: 100px;
+    padding: 12px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO Y NOMBRE */
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    color: white;
+    text-decoration: none;
+}
+
+.marca img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.titulo {
+    font-family: "Unbounded", sans-serif;
+}
+
+.titulo p {
+    margin: 0;
+}
+
+.tit {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.subtitulo {
+    font-family: "Signika", sans-serif;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* ENLACE VOLVER */
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 18px;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.navegacion a:hover {
+    background-color: white;
+    color: #000046;
+}
+
+main {
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #000046;
+    text-align: center;
+}
+
+main img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+p, li {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+h3 {
+    color: #000046;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #000046;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.boton:hover {
+    background-color: #f7944e;
+    color: black;
+}
+
+footer {
+    background-color: #000046;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 85%;
+        padding: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        padding: 12px 15px;
+        min-height: 85px;
+    }
+
+    .marca img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tit {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    .subtitulo {
+        font-size: 11px;
+    }
+
+    .navegacion a {
+        padding: 8px;
+        font-size: 13px;
+    }
+}

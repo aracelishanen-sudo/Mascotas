@@ -1,0 +1,703 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    color: #222222;
+    font-family: "Signika", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: "Archivo Black", sans-serif;
+    color: #000046;
+    font-size: clamp(25px, 3vw, 35px);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/*MENÚ SUPERIOR*/
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inicio {
+    min-height: 42px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 4%;
+}
+
+.inicio nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.desplegable {
+    position: relative;
+}
+
+.desplegable > a {
+    display: block;
+    color: #111111;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.desplegable > a:hover {
+    color: #397fc0;
+}
+
+/* Submenú */
+.opciones {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 170px;
+}
+
+.opciones a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.opciones a:hover {
+    background-color: #e7f0fa;
+}
+
+.desplegable:hover .opciones {
+    display: block;
+}
+
+.menu {
+    width: 100%;
+    background-color: #000046;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 12px 4%;
+}
+
+/* Logo y nombre */
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    /* Evita que un elemento se haga más pequeño */
+    flex-shrink: 0;
+
+    color: white;
+    text-decoration: none;
+}
+
+.marca img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.titulo {
+    font-family: "Unbounded", sans-serif;
+    margin: 0;
+}
+
+.titulo p {
+    margin: 0;
+}
+
+.tit {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.subtitulo {
+    font-family: "Signika", sans-serif;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(15px, 3vw, 45px);
+}
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s, color 0.3s;
+}
+
+.navegacion a:hover {
+    color: #a9d7ff;
+    border-bottom-color: white;
+}
+
+/* Botón de registro */
+
+.btn-registro {
+    /* Permite que un elemento se comporte como un elemento en línea */
+    display: inline-block;
+
+    flex-shrink: 0;
+    background-color: white;
+    color: #000046;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 18px;
+    font-family: "Signika", sans-serif;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-registro:hover {
+    background-color: #3987c7;
+    color: white;
+}
+
+.carrusel {
+    width: 100%;
+    background-color: #000046;
+}
+
+.carrusel img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* NOSOTROS*/
+.principal {
+    width: 100%;
+    background-color: white;
+    padding: 45px 5%;
+}
+
+.principal h1 {
+    margin-bottom: 30px;
+}
+
+.contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.contenido p {
+    flex: 1;
+    min-width: 0;
+
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.contenido img {
+    width: 48%;
+    max-width: 600px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* SECCIÓN */
+
+.facultad {
+    width: 100%;
+    padding: 50px 5%;
+    background-color: #f5f6fa;
+    text-align: center;
+}
+
+.facultad h1 {
+    margin-bottom: 35px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+/* Especificidad para no afectar otras tarjetas */
+.facultad .facultad-card {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.facultad .card-img-top {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.facultad .card-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.facultad .card-title {
+    color: #000046;
+    font-family: "Signika", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.facultad .card-text {
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.facultad .btn {
+    background-color: #000046;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    margin-top: auto;
+}
+
+.facultad .btn:hover {
+    background-color: #252575;
+}
+
+.facultad .facultad-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+}
+
+/* CAMPUS */
+.campus-seccion {
+    width: 100%;
+    padding: 50px 4.4%;
+    background-color: #ffffff;
+}
+
+.campus-seccion h1 {
+    margin-bottom: 30px;
+}
+
+.campus {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.campus-card {
+    min-width: 0;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 0;
+}
+
+/* Imagen del campus */
+.campus-imagen {
+    width: 100%;
+    height: 235px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.campus-imagen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.60),
+        rgba(0, 0, 0, 0.05)
+    );
+}
+
+.arequipa {
+    background-image: url(img/are.png);
+}
+
+.ayacucho {
+    background-image: url(img/aya.png);
+}
+
+.cusco {
+    background-image: url(img/cusco.png);
+}
+
+/* Títulos imágenes */
+.campus-titulo {
+    position: relative;
+    z-index: 1;
+    padding: 35px 22px;
+    color: white;
+}
+
+.campus-titulo h2 {
+    margin-top: 8px;
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(22px, 2.3vw, 34px);
+    letter-spacing: -1px;
+    line-height: 1.2;
+    color: white;
+}
+
+.campus-contenido {
+    padding: 18px 16px 20px;
+}
+
+.campus-contenido h3 {
+    color: #111111;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.campus-contenido p {
+    color: #222222;
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 14px;
+}
+
+.campus-contenido a {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #0c0b61;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.campus-contenido a span {
+    display: inline-block;
+    font-size: 21px;
+    transition: transform 0.3s;
+}
+
+.campus-contenido a:hover {
+    color: #00588b;
+}
+
+.campus-contenido a:hover span {
+    transform: translate(4px, -4px);
+}
+
+
+/* REGISTRO */
+
+.registro {
+    background-color: #f5f6fa;
+    padding: 45px 5%;
+    text-align: center;
+}
+
+.registro h1 {
+    line-height: 1.4;
+}
+
+.registro p {
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.registro .btn-registro {
+    background-color: #000046;
+    color: white;
+}
+
+.registro .btn-registro:hover {
+    background-color: #3987c7;
+}
+
+.footer {
+    background-color: #000046;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* TABLETS */
+@media (max-width: 992px) {
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px 30px;
+    }
+
+    .marca {
+        margin-right: auto;
+    }
+
+    .navegacion {
+        gap: 25px;
+    }
+
+    .contenedor {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .campus {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contenido {
+        gap: 25px;
+    }
+
+    .contenido p {
+        font-size: 17px;
+    }
+
+    .contenido img {
+        width: 45%;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 25px;
+        margin-bottom: 22px;
+    }
+
+    /* Menú superior */
+    .inicio {
+        justify-content: center;
+        padding: 8px 15px;
+    }
+
+    .inicio nav {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .opciones {
+        min-width: 150px;
+    }
+
+    /* Menú principal vertical */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 18px 15px 22px;
+    }
+
+    .marca {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .marca img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tit {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .subtitulo {
+        font-size: 12px;
+    }
+
+    .navegacion {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 24px;
+    }
+
+    .navegacion a {
+        font-size: 15px;
+        padding: 5px 0;
+    }
+
+    .menu > .btn-registro {
+        padding: 9px 22px;
+    }
+
+    /* Carrusel */
+    .carrusel img {
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 12%;
+    }
+
+    .principal {
+        padding: 32px 20px;
+    }
+
+    .contenido {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 22px;
+    }
+
+    .contenido p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.75;
+        text-align: left;
+    }
+
+    .contenido img {
+        width: 100%;
+        max-width: none;
+        max-height: 300px;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .facultad {
+        padding: 35px 20px;
+    }
+
+    .contenedor {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .facultad .facultad-card {
+        width: 100%;
+        max-width: 420px;
+        justify-self: center;
+    }
+
+    .facultad .card-img-top {
+        height: 210px;
+    }
+
+    .facultad .card-body {
+        padding: 22px 18px;
+    }
+
+    .facultad .card-title {
+        font-size: 19px;
+    }
+
+    .campus-seccion {
+        padding: 35px 20px;
+    }
+
+    .campus {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .campus-card {
+        width: 100%;
+    }
+
+    .campus-imagen {
+        height: 220px;
+    }
+
+    .campus-titulo {
+        padding: 30px 20px;
+    }
+
+    .campus-titulo h2 {
+        font-size: 29px;
+    }
+
+    .campus-contenido {
+        padding: 18px;
+    }
+
+    .campus-contenido h3 {
+        font-size: 18px;
+    }
+
+    .campus-contenido p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .registro {
+        padding: 35px 20px;
+    }
+
+    .registro p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .footer {
+        padding: 20px 15px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}
